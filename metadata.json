@@ -1,0 +1,8 @@
+{
+  "name": "Remix P.S Treinamentos - Resgate e Emergência",
+  "description": "Landing page de alta performance para cursos de bombeiro civil e guarda-vidas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
