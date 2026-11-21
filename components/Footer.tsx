@@ -3,7 +3,7 @@ import { SOCIAL_LINKS } from '../constants';
 import { Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const logoUrl = "https://i.ibb.co/gZJ0TZFd/Adobe-Express-file.png";
+  const logoUrl = "/images/logo.png";
 
   return (
     <footer className="bg-emergency-black text-white pt-16 pb-8 border-t-8 border-emergency-red">

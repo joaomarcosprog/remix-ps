@@ -1,16 +1,16 @@
 import { LifeBuoy, Flame, HeartPulse, ShieldAlert, Users, HardHat, Award } from 'lucide-react';
 
 export const IMAGES = {
-  logo: "https://i.ibb.co/Swy0Dcys/Snap-Insta-to-488600621-1777644026427240-6858777735056928768-n.jpg", 
-  service_firefighter: "https://i.ibb.co/1Gx80jKk/photo.webp", 
-  service_lifeguard: "https://i.ibb.co/Rpf8J7cD/photo.jpg", 
-  course_first_aid: "https://i.ibb.co/wZ0z377s/d5a03fb5-bfcb-4188-87da-1b13b7cc340c.jpg", 
-  course_brigade: "https://i.ibb.co/FLtwTqkv/Snap-Insta-to-434374560-7297286667046635-2454867229478745687-n.jpg", 
-  course_lifeguard: "https://i.ibb.co/4RNzDFqn/Snap-Insta-to-590428225-17941366212095841-5857972014208939382-n.webp",
-  gallery_main: "https://i.ibb.co/B5kL908S/photo-1.jpg", 
-  gallery_secondary: "https://i.ibb.co/y9Gjzgd/IMG-20250323-092936.jpg",
-  gallery_tertiary: "https://i.ibb.co/s9yyjwzr/Snap-Insta-to-572094242-17936535630095841-6973727848562866143-n.jpg", 
-  gallery_quaternary: "https://i.ibb.co/ccrf8GDn/photo-2.jpg",
+  logo: "/images/logo.png", 
+  service_firefighter: "/images/service-firefighter.webp", 
+  service_lifeguard: "/images/service-lifeguard.jpg", 
+  course_first_aid: "/images/course-first-aid.jpg", 
+  course_brigade: "/images/course-brigade.jpg", 
+  course_lifeguard: "/images/course-lifeguard.webp",
+  gallery_main: "/images/gallery-1.jpg", 
+  gallery_secondary: "/images/gallery-2.jpg",
+  gallery_tertiary: "/images/gallery-3.jpg", 
+  gallery_quaternary: "/images/gallery-4.jpg",
 };
 
 export const SOCIAL_LINKS = {

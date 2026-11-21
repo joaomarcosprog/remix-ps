@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   // Favicon URL fornecido pelo usuário (transparente)
-  const logoUrl = "https://i.ibb.co/gZJ0TZFd/Adobe-Express-file.png";
+  const logoUrl = "/images/logo.png";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);

@@ -22,7 +22,7 @@ const TrainingHighlight: React.FC = () => {
   return (
     <section className="py-24 bg-zinc-950 relative overflow-hidden border-t-8 border-zinc-900">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('/images/patterns/dark-matter.png')] opacity-30"></div>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emergency-red to-transparent opacity-50"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
