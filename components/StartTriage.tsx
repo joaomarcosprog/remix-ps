@@ -228,7 +228,7 @@ const StartTriage: React.FC<SimulatorHubProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Dynamic Content Area */}
-        <div className="flex-1 overflow-y-auto bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+        <div className="flex-1 overflow-y-auto bg-[url('/images/patterns/carbon-fibre.png')]">
           
           {activeView === 'hub' && (
             <div className="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 animate-in zoom-in-95 duration-300">
