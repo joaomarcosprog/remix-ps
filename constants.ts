@@ -136,3 +136,91 @@ export const STATS = [
   { label: "Vidas Protegidas", value: "+5.000", icon: Users },
   { label: "Profissionais Formados", value: "+500", icon: Award },
 ];
+
+export interface FirstAidUpdateItem {
+  id: string;
+  title: string;
+  source: string;
+  sourceType: 'sobrasa' | 'aha' | 'samu' | 'lei' | 'geral';
+  category: string;
+  date: string;
+  summary: string;
+  practicalImpact: string;
+  verificationStatus: string;
+  sourceUrl?: string;
+}
+
+export const VERIFIED_FIRST_AID_UPDATES: FirstAidUpdateItem[] = [
+  {
+    id: "aha-cpr-q2",
+    title: "Diretrizes de RCP e Cuidados Cardiovasculares de Emergência",
+    source: "AHA / Sociedade Brasileira de Cardiologia (SBC)",
+    sourceType: "aha",
+    category: "Ressuscitação Cardiopulmonar",
+    date: "Diretriz Vigente",
+    summary: "Reforço estrito na qualidade das compressões torácicas (profundidade de 5 a 6 cm em adultos e ritmo de 100 a 120 cpm). A pausa para ventilação ou análise do DEA não deve exceder 10 segundos, visando fração de compressão torácica acima de 60%.",
+    practicalImpact: "Revezar socorristas a cada 2 minutos antes do cansaço muscular evidente, garantindo retorno total do tórax.",
+    verificationStatus: "Diretriz Internacional Validada",
+    sourceUrl: "https://abccardiol.org/article/atualizacao-da-diretriz-de-ressuscitacao-cardiopulmonar-e-cuidados-cardiovasculares-de-emergencia-da-sociedade-brasileira-de-cardiologia-2019/"
+  },
+  {
+    id: "sobrasa-drowning-protocol",
+    title: "Classificação em 6 Graus de Afogamento e Manual de Suporte Básico de Vida Aquático",
+    source: "SOBRASA (Sociedade Brasileira de Salvamento Aquático)",
+    sourceType: "sobrasa",
+    category: "Salvamento Aquático",
+    date: "Diretriz Nacional SOBRASA",
+    summary: "O afogamento é essencialmente um evento hipóxico respiratório. Em casos de PCR por afogamento (Grau 6), o protocolo determina a realização imediata de 5 ventilações de resgate antes de iniciar as compressões torácicas 30:2.",
+    practicalImpact: "Não atrasar o suporte tentando retirar água do pulmão: as 5 insuflações iniciais são vitais para oxigenar o miocárdio sob hipóxia.",
+    verificationStatus: "Norma Técnica Brasileira",
+    sourceUrl: "https://www.sobrasa.org/new_sobrasa/arquivos/SBVA/SBVA3.pdf"
+  },
+  {
+    id: "samu-ovace-infant",
+    title: "Protocolo de Suporte Básico de Vida: Manejo de OVACE (Desobstrução de Vias Aéreas)",
+    source: "Ministério da Saúde / SAMU 192 (BVSMS)",
+    sourceType: "samu",
+    category: "Atendimento Pré-Hospitalar",
+    date: "Manual Oficial do SAMU 192",
+    summary: "Em bebês conscientes com engasgo severo (tosse ineficaz), aplica-se a manobra de 5 pancadas firmes no dorso seguidas de 5 compressões torácicas. Em adultos, aplica-se a Manobra de Heimlich. Proibida a varredura digital às cegas.",
+    practicalImpact: "A pinça digital só deve ser realizada se o corpo estranho estiver 100% visível na cavidade oral.",
+    verificationStatus: "Protocolo Federal de APH",
+    sourceUrl: "https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf"
+  },
+  {
+    id: "lei-lucas-13722",
+    title: "Lei Lucas (Lei nº 13.722): Exigência e Reciclagem Anual de Primeiros Socorros em Escolas",
+    source: "Senado Federal / Legislação Federal",
+    sourceType: "lei",
+    category: "Legislação & Normas",
+    date: "Obrigatória em Todo o Brasil",
+    summary: "Determina a obrigatoriedade de capacitação e reciclagem em noções básicas de primeiros socorros para professores e funcionários de estabelecimentos de ensino públicos e privados de educação básica e recreação.",
+    practicalImpact: "Instituições de ensino e creches devem manter certificação anual atualizada e kits de primeiros socorros inspecionados.",
+    verificationStatus: "Legislação Federal",
+    sourceUrl: "https://legis.senado.leg.br/norma/30432320"
+  },
+  {
+    id: "mte-nr23-incendio",
+    title: "Norma Regulamentadora NR-23: Proteção Contra Incêndios e Saídas de Emergência",
+    source: "Ministério do Trabalho e Emprego",
+    sourceType: "geral",
+    category: "Segurança & Brigadas",
+    date: "Texto Vigente Atualizado",
+    summary: "Estabelece os requisitos de prevenção contra incêndios, rotas de fuga desobstruídas, sinalização de emergência e treinamento de pessoal para resposta inicial a princípios de incêndio em estabelecimentos comerciais e industriais.",
+    practicalImpact: "Formação periódica de brigadistas e inspeção contínua dos sistemas de combate a incêndio e iluminação de emergência.",
+    verificationStatus: "Norma Regulamentadora Oficial",
+    sourceUrl: "https://www.guiatrabalhista.com.br/legislacao/nr/nr23.htm"
+  },
+  {
+    id: "mte-nr35-altura",
+    title: "Norma Regulamentadora NR-35: Trabalho em Altura e Procedimentos de Emergência e Resgate",
+    source: "Ministério do Trabalho e Emprego",
+    sourceType: "geral",
+    category: "Segurança & Brigadas",
+    date: "Texto Vigente Atualizado",
+    summary: "Determina que toda atividade executada acima de 2 metros de altura deve contar com planejamento, análise de risco e plano de resgate para contenção de trauma de suspensão inerte.",
+    practicalImpact: "Equipes de segurança devem possuir plano de emergência prático com tempos de resposta rápidos para liberação de vítimas suspensas.",
+    verificationStatus: "Norma Regulamentadora Oficial",
+    sourceUrl: "https://www.guiatrabalhista.com.br/legislacao/nr/nr35.htm"
+  }
+];

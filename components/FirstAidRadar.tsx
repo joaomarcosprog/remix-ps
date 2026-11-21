@@ -14,6 +14,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { FirstAidUpdate } from '../types';
+import { VERIFIED_FIRST_AID_UPDATES } from '../constants';
 
 const SOURCE_BADGES: Record<string, { label: string; bg: string; text: string; icon: React.ReactNode }> = {
   sobrasa: {
@@ -49,26 +50,25 @@ const SOURCE_BADGES: Record<string, { label: string; bg: string; text: string; i
 };
 
 const FirstAidRadar: React.FC = () => {
-  const [updates, setUpdates] = useState<FirstAidUpdate[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [updates, setUpdates] = useState<FirstAidUpdate[]>(VERIFIED_FIRST_AID_UPDATES);
+  const [loading, setLoading] = useState<boolean>(false);
   const [refreshing, setRefreshing] = useState<boolean>(false);
-  const [lastSync, setLastSync] = useState<string>('');
+  const [lastSync, setLastSync] = useState<string>('Diretrizes Homologadas');
   const [selectedCategory, setSelectedCategory] = useState<string>('Todas');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const fetchUpdates = async (force: boolean = false) => {
     try {
       if (force) setRefreshing(true);
-      else setLoading(true);
       setErrorMessage(null);
 
       const url = force ? '/api/first-aid-updates?refresh=true' : '/api/first-aid-updates';
       const res = await fetch(url);
       if (!res.ok) {
-        throw new Error(`Erro na resposta da rede: ${res.status}`);
+        throw new Error(`Status HTTP: ${res.status}`);
       }
       const data = await res.json();
-      if (data.updates && Array.isArray(data.updates)) {
+      if (data.updates && Array.isArray(data.updates) && data.updates.length > 0) {
         setUpdates(data.updates);
         if (data.lastSync) {
           const dateObj = new Date(data.lastSync);
@@ -84,8 +84,9 @@ const FirstAidRadar: React.FC = () => {
         }
       }
     } catch (err) {
-      console.error("Erro ao carregar atualizações de primeiros socorros:", err);
-      setErrorMessage("Não foi possível sincronizar agora. Exibindo diretrizes salvas.");
+      console.warn("Utilizando diretrizes oficiais salvas localmente:", err);
+      // Mantém as diretrizes homologadas locais caso a API externa não responda
+      setUpdates(VERIFIED_FIRST_AID_UPDATES);
     } finally {
       setLoading(false);
       setRefreshing(false);
